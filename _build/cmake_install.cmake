@@ -1,4 +1,4 @@
-# Install script for directory: /home/mvtop/homework3
+# Install script for directory: /home/mvtop/homework6/lab06
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,16 +42,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/mvtop/homework3/_build/formatter_lib/cmake_install.cmake")
-  include("/home/mvtop/homework3/_build/formatter_ex_lib/cmake_install.cmake")
-  include("/home/mvtop/homework3/_build/solver_lib/cmake_install.cmake")
-  include("/home/mvtop/homework3/_build/hello_world_application/cmake_install.cmake")
-  include("/home/mvtop/homework3/_build/solver_application/cmake_install.cmake")
-
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -60,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mvtop/homework3/_build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mvtop/homework6/lab06/_build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

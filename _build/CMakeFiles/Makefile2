@@ -54,245 +54,166 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mvtop/homework3
+CMAKE_SOURCE_DIR = /home/mvtop/homework6/lab06
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mvtop/homework3/_build
+CMAKE_BINARY_DIR = /home/mvtop/homework6/lab06/_build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: formatter_lib/all
-all: formatter_ex_lib/all
-all: solver_lib/all
-all: hello_world_application/all
-all: solver_application/all
+all: CMakeFiles/formatter_ex.dir/all
+all: CMakeFiles/formatter.dir/all
+all: CMakeFiles/solver.dir/all
+all: CMakeFiles/hello_world.dir/all
+all: CMakeFiles/equation.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: formatter_lib/preinstall
-preinstall: formatter_ex_lib/preinstall
-preinstall: solver_lib/preinstall
-preinstall: hello_world_application/preinstall
-preinstall: solver_application/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: formatter_lib/clean
-clean: formatter_ex_lib/clean
-clean: solver_lib/clean
-clean: hello_world_application/clean
-clean: solver_application/clean
+clean: CMakeFiles/formatter_ex.dir/clean
+clean: CMakeFiles/formatter.dir/clean
+clean: CMakeFiles/solver.dir/clean
+clean: CMakeFiles/hello_world.dir/clean
+clean: CMakeFiles/equation.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory formatter_ex_lib
-
-# Recursive "all" directory target.
-formatter_ex_lib/all: formatter_ex_lib/CMakeFiles/formatter_ex.dir/all
-.PHONY : formatter_ex_lib/all
-
-# Recursive "preinstall" directory target.
-formatter_ex_lib/preinstall:
-.PHONY : formatter_ex_lib/preinstall
-
-# Recursive "clean" directory target.
-formatter_ex_lib/clean: formatter_ex_lib/CMakeFiles/formatter_ex.dir/clean
-.PHONY : formatter_ex_lib/clean
-
-#=============================================================================
-# Directory level rules for directory formatter_lib
-
-# Recursive "all" directory target.
-formatter_lib/all: formatter_lib/CMakeFiles/formatter.dir/all
-.PHONY : formatter_lib/all
-
-# Recursive "preinstall" directory target.
-formatter_lib/preinstall:
-.PHONY : formatter_lib/preinstall
-
-# Recursive "clean" directory target.
-formatter_lib/clean: formatter_lib/CMakeFiles/formatter.dir/clean
-.PHONY : formatter_lib/clean
-
-#=============================================================================
-# Directory level rules for directory hello_world_application
-
-# Recursive "all" directory target.
-hello_world_application/all: hello_world_application/CMakeFiles/hello_world.dir/all
-.PHONY : hello_world_application/all
-
-# Recursive "preinstall" directory target.
-hello_world_application/preinstall:
-.PHONY : hello_world_application/preinstall
-
-# Recursive "clean" directory target.
-hello_world_application/clean: hello_world_application/CMakeFiles/hello_world.dir/clean
-.PHONY : hello_world_application/clean
-
-#=============================================================================
-# Directory level rules for directory solver_application
-
-# Recursive "all" directory target.
-solver_application/all: solver_application/CMakeFiles/equation.dir/all
-.PHONY : solver_application/all
-
-# Recursive "preinstall" directory target.
-solver_application/preinstall:
-.PHONY : solver_application/preinstall
-
-# Recursive "clean" directory target.
-solver_application/clean: solver_application/CMakeFiles/equation.dir/clean
-.PHONY : solver_application/clean
-
-#=============================================================================
-# Directory level rules for directory solver_lib
-
-# Recursive "all" directory target.
-solver_lib/all: solver_lib/CMakeFiles/solver.dir/all
-.PHONY : solver_lib/all
-
-# Recursive "preinstall" directory target.
-solver_lib/preinstall:
-.PHONY : solver_lib/preinstall
-
-# Recursive "clean" directory target.
-solver_lib/clean: solver_lib/CMakeFiles/solver.dir/clean
-.PHONY : solver_lib/clean
-
-#=============================================================================
-# Target rules for target formatter_lib/CMakeFiles/formatter.dir
+# Target rules for target CMakeFiles/formatter_ex.dir
 
 # All Build rule for target.
-formatter_lib/CMakeFiles/formatter.dir/all:
-	$(MAKE) $(MAKESILENT) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/depend
-	$(MAKE) $(MAKESILENT) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework3/_build/CMakeFiles --progress-num=3,4 "Built target formatter"
-.PHONY : formatter_lib/CMakeFiles/formatter.dir/all
+CMakeFiles/formatter_ex.dir/all: CMakeFiles/formatter.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework6/lab06/_build/CMakeFiles --progress-num=5,6 "Built target formatter_ex"
+.PHONY : CMakeFiles/formatter_ex.dir/all
 
 # Build rule for subdir invocation for target.
-formatter_lib/CMakeFiles/formatter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_lib/CMakeFiles/formatter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
-.PHONY : formatter_lib/CMakeFiles/formatter.dir/rule
+CMakeFiles/formatter_ex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/formatter_ex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
+.PHONY : CMakeFiles/formatter_ex.dir/rule
 
 # Convenience name for target.
-formatter: formatter_lib/CMakeFiles/formatter.dir/rule
-.PHONY : formatter
-
-# clean rule for target.
-formatter_lib/CMakeFiles/formatter.dir/clean:
-	$(MAKE) $(MAKESILENT) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/clean
-.PHONY : formatter_lib/CMakeFiles/formatter.dir/clean
-
-#=============================================================================
-# Target rules for target formatter_ex_lib/CMakeFiles/formatter_ex.dir
-
-# All Build rule for target.
-formatter_ex_lib/CMakeFiles/formatter_ex.dir/all: formatter_lib/CMakeFiles/formatter.dir/all
-	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/depend
-	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework3/_build/CMakeFiles --progress-num=5,6 "Built target formatter_ex"
-.PHONY : formatter_ex_lib/CMakeFiles/formatter_ex.dir/all
-
-# Build rule for subdir invocation for target.
-formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_ex_lib/CMakeFiles/formatter_ex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
-.PHONY : formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule
-
-# Convenience name for target.
-formatter_ex: formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule
+formatter_ex: CMakeFiles/formatter_ex.dir/rule
 .PHONY : formatter_ex
 
 # clean rule for target.
-formatter_ex_lib/CMakeFiles/formatter_ex.dir/clean:
-	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/clean
-.PHONY : formatter_ex_lib/CMakeFiles/formatter_ex.dir/clean
+CMakeFiles/formatter_ex.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/clean
+.PHONY : CMakeFiles/formatter_ex.dir/clean
 
 #=============================================================================
-# Target rules for target solver_lib/CMakeFiles/solver.dir
+# Target rules for target CMakeFiles/formatter.dir
 
 # All Build rule for target.
-solver_lib/CMakeFiles/solver.dir/all:
-	$(MAKE) $(MAKESILENT) -f solver_lib/CMakeFiles/solver.dir/build.make solver_lib/CMakeFiles/solver.dir/depend
-	$(MAKE) $(MAKESILENT) -f solver_lib/CMakeFiles/solver.dir/build.make solver_lib/CMakeFiles/solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework3/_build/CMakeFiles --progress-num=9,10 "Built target solver"
-.PHONY : solver_lib/CMakeFiles/solver.dir/all
+CMakeFiles/formatter.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework6/lab06/_build/CMakeFiles --progress-num=3,4 "Built target formatter"
+.PHONY : CMakeFiles/formatter.dir/all
 
 # Build rule for subdir invocation for target.
-solver_lib/CMakeFiles/solver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solver_lib/CMakeFiles/solver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
-.PHONY : solver_lib/CMakeFiles/solver.dir/rule
+CMakeFiles/formatter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/formatter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
+.PHONY : CMakeFiles/formatter.dir/rule
 
 # Convenience name for target.
-solver: solver_lib/CMakeFiles/solver.dir/rule
+formatter: CMakeFiles/formatter.dir/rule
+.PHONY : formatter
+
+# clean rule for target.
+CMakeFiles/formatter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/clean
+.PHONY : CMakeFiles/formatter.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/solver.dir
+
+# All Build rule for target.
+CMakeFiles/solver.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework6/lab06/_build/CMakeFiles --progress-num=9,10 "Built target solver"
+.PHONY : CMakeFiles/solver.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/solver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/solver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
+.PHONY : CMakeFiles/solver.dir/rule
+
+# Convenience name for target.
+solver: CMakeFiles/solver.dir/rule
 .PHONY : solver
 
 # clean rule for target.
-solver_lib/CMakeFiles/solver.dir/clean:
-	$(MAKE) $(MAKESILENT) -f solver_lib/CMakeFiles/solver.dir/build.make solver_lib/CMakeFiles/solver.dir/clean
-.PHONY : solver_lib/CMakeFiles/solver.dir/clean
+CMakeFiles/solver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/clean
+.PHONY : CMakeFiles/solver.dir/clean
 
 #=============================================================================
-# Target rules for target hello_world_application/CMakeFiles/hello_world.dir
+# Target rules for target CMakeFiles/hello_world.dir
 
 # All Build rule for target.
-hello_world_application/CMakeFiles/hello_world.dir/all: formatter_lib/CMakeFiles/formatter.dir/all
-hello_world_application/CMakeFiles/hello_world.dir/all: formatter_ex_lib/CMakeFiles/formatter_ex.dir/all
-	$(MAKE) $(MAKESILENT) -f hello_world_application/CMakeFiles/hello_world.dir/build.make hello_world_application/CMakeFiles/hello_world.dir/depend
-	$(MAKE) $(MAKESILENT) -f hello_world_application/CMakeFiles/hello_world.dir/build.make hello_world_application/CMakeFiles/hello_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework3/_build/CMakeFiles --progress-num=7,8 "Built target hello_world"
-.PHONY : hello_world_application/CMakeFiles/hello_world.dir/all
+CMakeFiles/hello_world.dir/all: CMakeFiles/formatter.dir/all
+CMakeFiles/hello_world.dir/all: CMakeFiles/formatter_ex.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework6/lab06/_build/CMakeFiles --progress-num=7,8 "Built target hello_world"
+.PHONY : CMakeFiles/hello_world.dir/all
 
 # Build rule for subdir invocation for target.
-hello_world_application/CMakeFiles/hello_world.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_world_application/CMakeFiles/hello_world.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
-.PHONY : hello_world_application/CMakeFiles/hello_world.dir/rule
+CMakeFiles/hello_world.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello_world.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
+.PHONY : CMakeFiles/hello_world.dir/rule
 
 # Convenience name for target.
-hello_world: hello_world_application/CMakeFiles/hello_world.dir/rule
+hello_world: CMakeFiles/hello_world.dir/rule
 .PHONY : hello_world
 
 # clean rule for target.
-hello_world_application/CMakeFiles/hello_world.dir/clean:
-	$(MAKE) $(MAKESILENT) -f hello_world_application/CMakeFiles/hello_world.dir/build.make hello_world_application/CMakeFiles/hello_world.dir/clean
-.PHONY : hello_world_application/CMakeFiles/hello_world.dir/clean
+CMakeFiles/hello_world.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/clean
+.PHONY : CMakeFiles/hello_world.dir/clean
 
 #=============================================================================
-# Target rules for target solver_application/CMakeFiles/equation.dir
+# Target rules for target CMakeFiles/equation.dir
 
 # All Build rule for target.
-solver_application/CMakeFiles/equation.dir/all: formatter_lib/CMakeFiles/formatter.dir/all
-solver_application/CMakeFiles/equation.dir/all: formatter_ex_lib/CMakeFiles/formatter_ex.dir/all
-solver_application/CMakeFiles/equation.dir/all: solver_lib/CMakeFiles/solver.dir/all
-	$(MAKE) $(MAKESILENT) -f solver_application/CMakeFiles/equation.dir/build.make solver_application/CMakeFiles/equation.dir/depend
-	$(MAKE) $(MAKESILENT) -f solver_application/CMakeFiles/equation.dir/build.make solver_application/CMakeFiles/equation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework3/_build/CMakeFiles --progress-num=1,2 "Built target equation"
-.PHONY : solver_application/CMakeFiles/equation.dir/all
+CMakeFiles/equation.dir/all: CMakeFiles/formatter.dir/all
+CMakeFiles/equation.dir/all: CMakeFiles/solver.dir/all
+CMakeFiles/equation.dir/all: CMakeFiles/formatter_ex.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mvtop/homework6/lab06/_build/CMakeFiles --progress-num=1,2 "Built target equation"
+.PHONY : CMakeFiles/equation.dir/all
 
 # Build rule for subdir invocation for target.
-solver_application/CMakeFiles/equation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solver_application/CMakeFiles/equation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
-.PHONY : solver_application/CMakeFiles/equation.dir/rule
+CMakeFiles/equation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/equation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
+.PHONY : CMakeFiles/equation.dir/rule
 
 # Convenience name for target.
-equation: solver_application/CMakeFiles/equation.dir/rule
+equation: CMakeFiles/equation.dir/rule
 .PHONY : equation
 
 # clean rule for target.
-solver_application/CMakeFiles/equation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f solver_application/CMakeFiles/equation.dir/build.make solver_application/CMakeFiles/equation.dir/clean
-.PHONY : solver_application/CMakeFiles/equation.dir/clean
+CMakeFiles/equation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/clean
+.PHONY : CMakeFiles/equation.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

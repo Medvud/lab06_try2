@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mvtop/homework3
+CMAKE_SOURCE_DIR = /home/mvtop/homework6/lab06
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mvtop/homework3/_build
+CMAKE_BINARY_DIR = /home/mvtop/homework6/lab06/_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles /home/mvtop/homework3/_build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles /home/mvtop/homework6/lab06/_build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework3/_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mvtop/homework6/lab06/_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named formatter
-
-# Build rule for target.
-formatter: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter
-.PHONY : formatter
-
-# fast build rule for target.
-formatter/fast:
-	$(MAKE) $(MAKESILENT) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/build
-.PHONY : formatter/fast
-
-#=============================================================================
 # Target rules for targets named formatter_ex
 
 # Build rule for target.
@@ -139,8 +126,21 @@ formatter_ex: cmake_check_build_system
 
 # fast build rule for target.
 formatter_ex/fast:
-	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/build
 .PHONY : formatter_ex/fast
+
+#=============================================================================
+# Target rules for targets named formatter
+
+# Build rule for target.
+formatter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter
+.PHONY : formatter
+
+# fast build rule for target.
+formatter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/build
+.PHONY : formatter/fast
 
 #=============================================================================
 # Target rules for targets named solver
@@ -152,7 +152,7 @@ solver: cmake_check_build_system
 
 # fast build rule for target.
 solver/fast:
-	$(MAKE) $(MAKESILENT) -f solver_lib/CMakeFiles/solver.dir/build.make solver_lib/CMakeFiles/solver.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
 .PHONY : solver/fast
 
 #=============================================================================
@@ -165,7 +165,7 @@ hello_world: cmake_check_build_system
 
 # fast build rule for target.
 hello_world/fast:
-	$(MAKE) $(MAKESILENT) -f hello_world_application/CMakeFiles/hello_world.dir/build.make hello_world_application/CMakeFiles/hello_world.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
 .PHONY : hello_world/fast
 
 #=============================================================================
@@ -178,8 +178,128 @@ equation: cmake_check_build_system
 
 # fast build rule for target.
 equation/fast:
-	$(MAKE) $(MAKESILENT) -f solver_application/CMakeFiles/equation.dir/build.make solver_application/CMakeFiles/equation.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/build
 .PHONY : equation/fast
+
+formatter_ex_lib/formatter_ex.o: formatter_ex_lib/formatter_ex.cpp.o
+.PHONY : formatter_ex_lib/formatter_ex.o
+
+# target to build an object file
+formatter_ex_lib/formatter_ex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex_lib/formatter_ex.cpp.o
+.PHONY : formatter_ex_lib/formatter_ex.cpp.o
+
+formatter_ex_lib/formatter_ex.i: formatter_ex_lib/formatter_ex.cpp.i
+.PHONY : formatter_ex_lib/formatter_ex.i
+
+# target to preprocess a source file
+formatter_ex_lib/formatter_ex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex_lib/formatter_ex.cpp.i
+.PHONY : formatter_ex_lib/formatter_ex.cpp.i
+
+formatter_ex_lib/formatter_ex.s: formatter_ex_lib/formatter_ex.cpp.s
+.PHONY : formatter_ex_lib/formatter_ex.s
+
+# target to generate assembly for a file
+formatter_ex_lib/formatter_ex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex_lib/formatter_ex.cpp.s
+.PHONY : formatter_ex_lib/formatter_ex.cpp.s
+
+formatter_lib/formatter.o: formatter_lib/formatter.cpp.o
+.PHONY : formatter_lib/formatter.o
+
+# target to build an object file
+formatter_lib/formatter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter_lib/formatter.cpp.o
+.PHONY : formatter_lib/formatter.cpp.o
+
+formatter_lib/formatter.i: formatter_lib/formatter.cpp.i
+.PHONY : formatter_lib/formatter.i
+
+# target to preprocess a source file
+formatter_lib/formatter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter_lib/formatter.cpp.i
+.PHONY : formatter_lib/formatter.cpp.i
+
+formatter_lib/formatter.s: formatter_lib/formatter.cpp.s
+.PHONY : formatter_lib/formatter.s
+
+# target to generate assembly for a file
+formatter_lib/formatter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter_lib/formatter.cpp.s
+.PHONY : formatter_lib/formatter.cpp.s
+
+hello_world_application/hello_world.o: hello_world_application/hello_world.cpp.o
+.PHONY : hello_world_application/hello_world.o
+
+# target to build an object file
+hello_world_application/hello_world.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world_application/hello_world.cpp.o
+.PHONY : hello_world_application/hello_world.cpp.o
+
+hello_world_application/hello_world.i: hello_world_application/hello_world.cpp.i
+.PHONY : hello_world_application/hello_world.i
+
+# target to preprocess a source file
+hello_world_application/hello_world.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world_application/hello_world.cpp.i
+.PHONY : hello_world_application/hello_world.cpp.i
+
+hello_world_application/hello_world.s: hello_world_application/hello_world.cpp.s
+.PHONY : hello_world_application/hello_world.s
+
+# target to generate assembly for a file
+hello_world_application/hello_world.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world_application/hello_world.cpp.s
+.PHONY : hello_world_application/hello_world.cpp.s
+
+solver_application/equation.o: solver_application/equation.cpp.o
+.PHONY : solver_application/equation.o
+
+# target to build an object file
+solver_application/equation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/solver_application/equation.cpp.o
+.PHONY : solver_application/equation.cpp.o
+
+solver_application/equation.i: solver_application/equation.cpp.i
+.PHONY : solver_application/equation.i
+
+# target to preprocess a source file
+solver_application/equation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/solver_application/equation.cpp.i
+.PHONY : solver_application/equation.cpp.i
+
+solver_application/equation.s: solver_application/equation.cpp.s
+.PHONY : solver_application/equation.s
+
+# target to generate assembly for a file
+solver_application/equation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/solver_application/equation.cpp.s
+.PHONY : solver_application/equation.cpp.s
+
+solver_lib/solver.o: solver_lib/solver.cpp.o
+.PHONY : solver_lib/solver.o
+
+# target to build an object file
+solver_lib/solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_lib/solver.cpp.o
+.PHONY : solver_lib/solver.cpp.o
+
+solver_lib/solver.i: solver_lib/solver.cpp.i
+.PHONY : solver_lib/solver.i
+
+# target to preprocess a source file
+solver_lib/solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_lib/solver.cpp.i
+.PHONY : solver_lib/solver.cpp.i
+
+solver_lib/solver.s: solver_lib/solver.cpp.s
+.PHONY : solver_lib/solver.s
+
+# target to generate assembly for a file
+solver_lib/solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver_lib/solver.cpp.s
+.PHONY : solver_lib/solver.cpp.s
 
 # Help Target
 help:
@@ -194,6 +314,21 @@ help:
 	@echo "... formatter_ex"
 	@echo "... hello_world"
 	@echo "... solver"
+	@echo "... formatter_ex_lib/formatter_ex.o"
+	@echo "... formatter_ex_lib/formatter_ex.i"
+	@echo "... formatter_ex_lib/formatter_ex.s"
+	@echo "... formatter_lib/formatter.o"
+	@echo "... formatter_lib/formatter.i"
+	@echo "... formatter_lib/formatter.s"
+	@echo "... hello_world_application/hello_world.o"
+	@echo "... hello_world_application/hello_world.i"
+	@echo "... hello_world_application/hello_world.s"
+	@echo "... solver_application/equation.o"
+	@echo "... solver_application/equation.i"
+	@echo "... solver_application/equation.s"
+	@echo "... solver_lib/solver.o"
+	@echo "... solver_lib/solver.i"
+	@echo "... solver_lib/solver.s"
 .PHONY : help
 
 

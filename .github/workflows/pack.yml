@@ -1,0 +1,107 @@
+name: BuildAndRelease
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: |
+          sudo apt update -y
+          sudo apt-get install -y cmake
+          sudo apt install -y rpm
+
+      - name: CMake configure
+        run: cmake -B build -S . -D CMAKE_BUILD_TYPE=Release
+
+      - name: Build binaries
+        run: cmake --build build --parallel
+
+      - name: Generate Linux packages
+        run: |
+          cmake --install build --prefix build/out
+          cmake -E chdir build cpack -G "DEB;RPM"
+
+      - name: Make source archives
+        run: |
+          git archive HEAD -o src.tar.gz --format=tar.gz
+          git archive HEAD -o src.zip --format=zip
+
+      - name: Upload Linux results
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: |
+            build/*.deb
+            build/*.rpm
+            src.*
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CMake configure
+        run: cmake -B build -S . -G "Visual Studio 17 2022" -A x64
+
+      - name: Build binaries
+        run: cmake --build build --config Release -- /m
+
+      - name: Generate MSI package
+        run: cmake -E chdir build cpack -G WIX
+
+      - name: Upload Windows results
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: build/*.msi
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CMake configure
+        run: cmake -B build -S . -D CMAKE_BUILD_TYPE=Release
+
+      - name: Build binaries
+        run: cmake --build build --parallel
+
+      - name: Generate DMG package
+        run: cmake -E chdir build cpack -G DragNDrop
+
+      - name: Upload macOS results
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos
+          path: build/*.dmg
+
+  release:
+    needs: [linux, windows, macos]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Collect artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
+          files: release-assets/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

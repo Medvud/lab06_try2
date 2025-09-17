@@ -7,15 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/mvtop/homework3/CMakeLists.txt"
+  "/home/mvtop/homework6/lab06/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
-  "/home/mvtop/homework3/formatter_ex_lib/CMakeLists.txt"
-  "/home/mvtop/homework3/formatter_lib/CMakeLists.txt"
-  "/home/mvtop/homework3/hello_world_application/CMakeLists.txt"
-  "/home/mvtop/homework3/solver_application/CMakeLists.txt"
-  "/home/mvtop/homework3/solver_lib/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
@@ -127,18 +122,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "formatter_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "formatter_ex_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "solver_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "hello_world_application/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "solver_application/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "formatter_lib/CMakeFiles/formatter.dir/DependInfo.cmake"
-  "formatter_ex_lib/CMakeFiles/formatter_ex.dir/DependInfo.cmake"
-  "solver_lib/CMakeFiles/solver.dir/DependInfo.cmake"
-  "hello_world_application/CMakeFiles/hello_world.dir/DependInfo.cmake"
-  "solver_application/CMakeFiles/equation.dir/DependInfo.cmake"
+  "CMakeFiles/formatter_ex.dir/DependInfo.cmake"
+  "CMakeFiles/formatter.dir/DependInfo.cmake"
+  "CMakeFiles/solver.dir/DependInfo.cmake"
+  "CMakeFiles/hello_world.dir/DependInfo.cmake"
+  "CMakeFiles/equation.dir/DependInfo.cmake"
   )
